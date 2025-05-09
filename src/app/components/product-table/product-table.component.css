@@ -277,7 +277,7 @@ tr:hover td {
 }
  /* Lista desplegable al pasar el mouse (hover) */
  .dropdown{
-  position: relative;
+  position: absolute;
   display: inline-block;
 }
 .dropdown-toggle{
