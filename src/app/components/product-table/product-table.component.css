@@ -1,4 +1,4 @@
-/* CONTENEDOR GENERAL */
+/* contenedor principal */
 .outer-container {
   background-color: #fff8cc;
   padding: 20px;
@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-/* NUEVA BARRA SUPERIOR: Búsqueda + botón Agregar */
+/* Búsqueda + botón Agregar */
 .barra-superior {
   display: flex;
   justify-content: space-between;
@@ -19,7 +19,7 @@
   box-sizing: border-box;
 }
 
-/* INPUT DE BÚSQUEDA */
+/* barra de busqueda*/
 .search-bar {
   margin: 0;
   width: auto;
@@ -123,7 +123,7 @@ tr:hover td {
   background-color: #fffb00ad;
 }
 
-/* SELECTOR DE PÁGINA */
+/* Tamaño de contenidos en tabla */
 .page-size {
   margin-top: 15px;
   display: flex;
@@ -139,7 +139,7 @@ tr:hover td {
   border: 1px solid #ccc;
 }
 
-/* BOTÓN AGREGAR */
+/* boton agregar */
 .btn-agregar {
   background-color: #f7e00c;
   color: rgb(0, 0, 0);
@@ -158,7 +158,7 @@ tr:hover td {
   background-color: #f1ee14e1;
 }
 
-/* OPCIONES */
+/* container opciones */
 .opciones-container {
   position: relative;
   display: inline-block;
@@ -179,7 +179,7 @@ tr:hover td {
 
 
 
-/* MODAL */
+/* modal de alerta de eliminacion */
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -275,9 +275,9 @@ tr:hover td {
 .menu-options button:hover{
   background-color: #f0f0f0;
 }
- /* LISTA DESPEGABLE TRES PUNTOS HORIZONTALES */
+ /* Lista desplegable al pasar el mouse (hover) */
  .dropdown{
-  position:fixed;
+  position: relative;
   display: inline-block;
 }
 .dropdown-toggle{
@@ -310,6 +310,8 @@ tr:hover td {
 }
 .dropdown-menu button:hover{
   background-color: #f0f0f0;
+
+/* Boton volver pagina anterior */
 }
 .btn-volver {
   background:#f3d113;
