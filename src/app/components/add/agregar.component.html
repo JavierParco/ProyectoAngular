@@ -1,0 +1,103 @@
+<div class="principal">
+    <div class="form">
+      <div style="text-align: left;">
+        <button class="btn-volver" (click)="volver()">
+        <span style="font-size: 16px;"><strong>Regresar</strong></span>
+        </button>
+    </div>
+      <h1><strong>Nuevo Producto</strong></h1>
+      <form (ngSubmit)="enviarFormulario()">
+        <div class="form-grid">
+          <div>
+            <label for="id">ID</label>
+            <input
+              type="text"
+              id="id"
+              name="id"
+              required
+              minlength="3"
+              maxlength="10"
+              [(ngModel)]="product.id"
+              [ngModelOptions]="{ standalone: true }"
+              placeholder="Ingrese ID (min 3 - max 10)"
+            />
+            <div *ngIf="showErrors && !product.id" style="color:red;">Campo obligatorio</div>
+          </div>
+  
+          <div>
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              required
+              [(ngModel)]="product.nombre"
+              [ngModelOptions]="{ standalone: true }"
+              placeholder="Nombre del producto"
+            />
+            <div *ngIf="showErrors && !product.nombre" style="color:red;">Campo obligatorio</div>
+          </div>
+  
+          <div>
+            <label for="description">Descripción</label>
+            <input
+              type="text"
+              id="description"
+              name="description"
+              required
+              [(ngModel)]="product.description"
+              [ngModelOptions]="{ standalone: true }"
+              placeholder="Descripción del producto"
+            />
+            <div *ngIf="showErrors && !product.description" style="color:red;">Campo obligatorio</div>
+          </div>
+  
+          <div>
+            <label for="logo">URL del logo</label>
+            <input
+              type="text"
+              id="logo"
+              name="logo"
+              required
+              [(ngModel)]="product.logo"
+              [ngModelOptions]="{ standalone: true }"
+              placeholder="Ingrese una URL"
+            />
+            <div *ngIf="showErrors && !product.logo" style="color:red;">URL no valida</div>
+          </div>
+  
+          <div>
+            <label for="fechaLib">Fecha de Liberación</label>
+            <input
+              type="date"
+              id="fechaLib"
+              name="fechaLib"
+              required
+              [(ngModel)]="product.fechaLib"
+              [ngModelOptions]="{ standalone: true }"
+            />
+            <div *ngIf="showErrors && !product.fechaLib" style="color:red;">Campo obligatorio</div>
+          </div>
+  
+          <div>
+            <label for="fechaRev">Fecha de Revisión</label>
+            <input
+              type="date"
+              id="fechaRev"
+              name="fechaRev"
+              required
+              [(ngModel)]="product.fechaRev"
+              [ngModelOptions]="{ standalone: true }"
+            />
+            <div *ngIf="showErrors && !product.fechaRev" style="color:red;">Campo obligatorio</div>
+          </div>
+        </div>
+        <br />
+        <div class="form-a">
+          <button type="reset" class="reset-btn"><strong>Reiniciar</strong></button>
+          <button type="submit" class="enviar-btn"><strong>Enviar</strong></button>
+        </div>
+      </form>
+    </div>
+</div>
+  
